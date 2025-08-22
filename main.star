@@ -109,10 +109,10 @@ def run(plan, args={}):
             and participant.cl_type == constants.CL_TYPE.lighthouse
         ):
             if (
-                "--target-peers=35" not in participant.cl_extra_params
+                "--target-peers=1" not in participant.cl_extra_params
                 and network_params.network == constants.NETWORK_NAME.kurtosis
             ):
-                participant.cl_extra_params.append("--target-peers=35")
+                participant.cl_extra_params.append("--target-peers=1")
 
     prefunded_accounts = genesis_constants.PRE_FUNDED_ACCOUNTS
     if (
